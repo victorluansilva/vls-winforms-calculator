@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Exemplo</id>
+    <version>1.0.0</version>
+    <authors>Exemplo</authors>
+    <description>Package Description</description>
+    <repository type="git" />
+    <dependencies>
+      <group targetFramework="net8.0-windows7.0" />
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net8.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WindowsForms" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="C:\Users\aluno.senai.pjcn\source\repos\Exemplo\bin\Debug\net8.0-windows\Exemplo.runtimeconfig.json" target="lib\net8.0-windows7.0\Exemplo.runtimeconfig.json" />
+    <file src="C:\Users\aluno.senai.pjcn\source\repos\Exemplo\bin\Debug\net8.0-windows\Exemplo.dll" target="lib\net8.0-windows7.0\Exemplo.dll" />
+  </files>
+</package>
