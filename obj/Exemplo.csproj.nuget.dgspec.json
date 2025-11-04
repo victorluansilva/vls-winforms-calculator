@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aluno.senai.pjcn\\source\\repos\\Exemplo\\Exemplo.csproj": {}
+    "C:\\Users\\aluno.senai.pjcn\\workspace\\vls-exemplo-windows-forms\\Exemplo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aluno.senai.pjcn\\source\\repos\\Exemplo\\Exemplo.csproj": {
+    "C:\\Users\\aluno.senai.pjcn\\workspace\\vls-exemplo-windows-forms\\Exemplo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aluno.senai.pjcn\\source\\repos\\Exemplo\\Exemplo.csproj",
+        "projectUniqueName": "C:\\Users\\aluno.senai.pjcn\\workspace\\vls-exemplo-windows-forms\\Exemplo.csproj",
         "projectName": "Exemplo",
-        "projectPath": "C:\\Users\\aluno.senai.pjcn\\source\\repos\\Exemplo\\Exemplo.csproj",
+        "projectPath": "C:\\Users\\aluno.senai.pjcn\\workspace\\vls-exemplo-windows-forms\\Exemplo.csproj",
         "packagesPath": "C:\\Users\\aluno.senai.pjcn\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aluno.senai.pjcn\\source\\repos\\Exemplo\\obj\\",
+        "outputPath": "C:\\Users\\aluno.senai.pjcn\\workspace\\vls-exemplo-windows-forms\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\aluno.senai.pjcn\\AppData\\Roaming\\NuGet\\NuGet.Config",
