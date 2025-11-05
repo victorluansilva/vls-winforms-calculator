@@ -19,7 +19,7 @@ namespace Exemplo.Classes
         {
             this.x = x;
         }
-        
+
         public double getX()
         {
             return this.x;
@@ -35,7 +35,7 @@ namespace Exemplo.Classes
             return this.y;
         }
 
-        //Operações
+        // Operações
 
         public double sum()
         {
@@ -57,7 +57,8 @@ namespace Exemplo.Classes
             if (this.y == 0)
             {
                 return 0;
-            } else
+            }
+            else
             {
                 return this.x / this.y;
             }
@@ -70,16 +71,26 @@ namespace Exemplo.Classes
 
         public double squareRootOfX()
         {
-            if(this.x == 0)
-            {
-                return 0;
-            } else if(this.x % 2 == 0){
-                return this.x / 2;
-            }
-            else
+            if (this.x < 0)
             {
                 return 0;
             }
+            return Math.Sqrt(this.x);
+        }
+
+        public double percentageXofY()
+        {
+            return (this.x / 100) * this.y;
+        }
+
+        public string toBinaryString()
+        {
+            return Convert.ToString((long)this.x, 2);
+        }
+
+        public double xRaisedToThePowerOfY()
+        {
+            return Math.Pow(this.x, this.y);
         }
 
     }

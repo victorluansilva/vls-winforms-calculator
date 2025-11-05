@@ -86,7 +86,6 @@
             labelOutput.Text = "...";
             labelOutput.TextAlign = ContentAlignment.TopRight;
             labelOutput.Visible = false;
-            labelOutput.Click += labelOutput_Click;
             // 
             // btnSoma
             // 
@@ -144,7 +143,7 @@
             label1.Name = "label1";
             label1.Size = new Size(65, 65);
             label1.TabIndex = 6;
-            label1.Text = "X";
+            label1.Text = "Y";
             label1.TextAlign = ContentAlignment.MiddleRight;
             // 
             // btnSub
@@ -165,6 +164,7 @@
             btnSub.TabIndex = 7;
             btnSub.Text = "-";
             btnSub.UseVisualStyleBackColor = false;
+            btnSub.Click += onSubClick;
             // 
             // btnMult
             // 
@@ -184,6 +184,7 @@
             btnMult.TabIndex = 8;
             btnMult.Text = "*";
             btnMult.UseVisualStyleBackColor = false;
+            btnMult.Click += onMultiply;
             // 
             // btnRaiz
             // 
@@ -203,6 +204,7 @@
             btnRaiz.TabIndex = 11;
             btnRaiz.Text = "√ ";
             btnRaiz.UseVisualStyleBackColor = false;
+            btnRaiz.Click += onSquareRootClick;
             // 
             // btnDobro
             // 
@@ -222,6 +224,7 @@
             btnDobro.TabIndex = 10;
             btnDobro.Text = "x²";
             btnDobro.UseVisualStyleBackColor = false;
+            btnDobro.Click += onSquaredClick;
             // 
             // btnDiv
             // 
@@ -241,6 +244,7 @@
             btnDiv.TabIndex = 9;
             btnDiv.Text = " / ";
             btnDiv.UseVisualStyleBackColor = false;
+            btnDiv.Click += onDivideClick;
             // 
             // button6
             // 
@@ -258,8 +262,9 @@
             button6.Padding = new Padding(5);
             button6.Size = new Size(100, 65);
             button6.TabIndex = 14;
-            button6.Text = "X^y";
+            button6.Text = "x^Y";
             button6.UseVisualStyleBackColor = false;
+            button6.Click += onXRaisedToY;
             // 
             // button7
             // 
@@ -279,6 +284,7 @@
             button7.TabIndex = 13;
             button7.Text = "01010";
             button7.UseVisualStyleBackColor = false;
+            button7.Click += onToBinarieClick;
             // 
             // btnPorcent
             // 
@@ -298,6 +304,7 @@
             btnPorcent.TabIndex = 12;
             btnPorcent.Text = "%";
             btnPorcent.UseVisualStyleBackColor = false;
+            btnPorcent.Click += onPercentageClick;
             // 
             // labelResult
             // 
