@@ -12,7 +12,7 @@ namespace Exemplo
             op = new Operacoes();
 
         }
-        private bool ValidarEConfigurarInputs(bool apenasX = false)
+        private bool validateInputSet(bool apenasX = false)
         {
             bool xValido = double.TryParse(inputTextX.Text, out double x);
             bool yValido = true;
@@ -52,11 +52,11 @@ namespace Exemplo
             labelResult.Visible = true;
             labelResult.Text = result;
         }
-        private void ExecutarOperacao(string tipoOperacao)
+        private void toCalculate(string tipoOperacao)
         {
             bool necessitaApenasX = (tipoOperacao == "DOBRO_X" || tipoOperacao == "RAIZ_X" || tipoOperacao == "BINARIO_X");
 
-            if (!ValidarEConfigurarInputs(necessitaApenasX))
+            if (!validateInputSet(necessitaApenasX))
             {
                 return;
             }
@@ -114,47 +114,47 @@ namespace Exemplo
 
         private void onSomaClick(object sender, EventArgs e)
         {
-            ExecutarOperacao("SOMA");
+            toCalculate("SOMA");
         }
 
         private void onSubClick(object sender, EventArgs e)
         {
-            ExecutarOperacao("SUB");
+            toCalculate("SUB");
         }
 
         private void onMultiply(object sender, EventArgs e)
         {
-            ExecutarOperacao("MULT");
+            toCalculate("MULT");
         }
 
         private void onDivideClick(object sender, EventArgs e)
         {
-            ExecutarOperacao("DIV");
+            toCalculate("DIV");
         }
 
         public void onSquaredClick(object sender, EventArgs e)
         {
-            ExecutarOperacao("DOBRO_X");
+            toCalculate("DOBRO_X");
         }
 
         public void onSquareRootClick(object sender, EventArgs e)
         {
-            ExecutarOperacao("RAIZ_X");
+            toCalculate("RAIZ_X");
         }
 
         public void onPercentageClick(object sender, EventArgs e)
         {
-            ExecutarOperacao("PCT_XY");
+            toCalculate("PCT_XY");
         }
 
         public void onToBinarieClick(object sender, EventArgs e)
         {
-            ExecutarOperacao("BINARIO_X");
+            toCalculate("BINARIO_X");
         }
 
         public void onXRaisedToY(object sender, EventArgs e)
         {
-            ExecutarOperacao("POT_XY");
+            toCalculate("POT_XY");
         }
     }
 }
