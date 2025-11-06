@@ -12,6 +12,7 @@ namespace Exemplo
             op = new Operacoes();
 
         }
+
         private bool validateInputSet(bool apenasX = false)
         {
             bool xValido = double.TryParse(inputTextX.Text, out double x);
@@ -43,7 +44,7 @@ namespace Exemplo
             labelOutput.Visible = true;
             labelOutput.Text = operacaoFormatada;
             labelResult.Visible = true;
-            labelResult.Text = result.ToString(); 
+            labelResult.Text = result.ToString();
         }
         public void printResultString(string operacaoFormatada, string result)
         {
@@ -52,6 +53,7 @@ namespace Exemplo
             labelResult.Visible = true;
             labelResult.Text = result;
         }
+
         private void toCalculate(string tipoOperacao)
         {
             bool necessitaApenasX = (tipoOperacao == "DOBRO_X" || tipoOperacao == "RAIZ_X" || tipoOperacao == "BINARIO_X");
@@ -84,11 +86,11 @@ namespace Exemplo
                     result = op.devide();
                     formatoSaida = $"{x} / {y} =";
                     break;
-                case "DOBRO_X": 
+                case "DOBRO_X":
                     result = op.squareOfX();
                     formatoSaida = $"{x}² =";
                     break;
-                case "RAIZ_X": 
+                case "RAIZ_X":
                     result = op.squareRootOfX();
                     formatoSaida = $"√{x} =";
                     break;
@@ -112,6 +114,11 @@ namespace Exemplo
 
         //Método dos botões
 
+        public void cleanInputs(object sender, EventArgs e)
+        {
+            inputTextX.Text = "";
+            inputTextY.Text = "";
+        }
         private void onSomaClick(object sender, EventArgs e)
         {
             toCalculate("SOMA");
@@ -156,5 +163,6 @@ namespace Exemplo
         {
             toCalculate("POT_XY");
         }
+
     }
 }

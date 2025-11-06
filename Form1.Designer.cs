@@ -44,6 +44,7 @@
             button7 = new Button();
             btnPorcent = new Button();
             labelResult = new Label();
+            btnClean = new Button();
             SuspendLayout();
             // 
             // inputTextX
@@ -322,6 +323,24 @@
             labelResult.TextAlign = ContentAlignment.MiddleCenter;
             labelResult.Visible = false;
             // 
+            // btnClean
+            // 
+            btnClean.BackColor = Color.FromArgb(255, 127, 84);
+            btnClean.Cursor = Cursors.Hand;
+            btnClean.FlatAppearance.BorderColor = SystemColors.Window;
+            btnClean.FlatAppearance.BorderSize = 3;
+            btnClean.FlatStyle = FlatStyle.Flat;
+            btnClean.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
+            btnClean.ForeColor = SystemColors.ButtonFace;
+            btnClean.Location = new Point(447, 377);
+            btnClean.Name = "btnClean";
+            btnClean.Padding = new Padding(5);
+            btnClean.Size = new Size(250, 65);
+            btnClean.TabIndex = 16;
+            btnClean.Text = "CE";
+            btnClean.UseVisualStyleBackColor = false;
+            btnClean.Click += cleanInputs;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -329,7 +348,7 @@
             BackColor = Color.FromArgb(62, 83, 102);
             BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(800, 450);
-            Controls.Add(labelResult);
+            Controls.Add(btnClean);
             Controls.Add(button6);
             Controls.Add(button7);
             Controls.Add(btnPorcent);
@@ -342,13 +361,14 @@
             Controls.Add(labelX);
             Controls.Add(inputTextY);
             Controls.Add(btnSoma);
-            Controls.Add(labelOutput);
             Controls.Add(labelTitle);
             Controls.Add(inputTextX);
+            Controls.Add(labelResult);
+            Controls.Add(labelOutput);
             FormBorderStyle = FormBorderStyle.SizableToolWindow;
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
+            Text = "VLS CALCULATOR";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -371,5 +391,6 @@
         private Button button7;
         private Button btnPorcent;
         private Label labelResult;
+        private Button btnClean;
     }
 }
