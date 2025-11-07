@@ -9,7 +9,8 @@ namespace Exemplo.Classes
     internal class Operacoes
     {
         double x, y;
-        public Operacoes() {
+        public Operacoes()
+        {
             x = 0; y = 0;
         }
 
@@ -19,7 +20,7 @@ namespace Exemplo.Classes
         {
             this.x = x;
         }
-        
+
         public double getX()
         {
             return this.x;
@@ -57,7 +58,8 @@ namespace Exemplo.Classes
             if (this.y == 0)
             {
                 return 0;
-            } else
+            }
+            else
             {
                 return this.x / this.y;
             }
@@ -68,19 +70,55 @@ namespace Exemplo.Classes
             return (this.x * this.x);
         }
 
-        public double squareRootOfX()
+        public double squareRootOfX()   
         {
-            if(this.x == 0)
+            return Math.Round(Math.Sqrt(this.x), 5);
+        }
+
+        public double percentageOfXintoY()
+        {
+            return Math.Round(((this.x / 100) * this.y),5);
+        }
+
+        public int toBinarie()
+        {
+            long value = (long) this.x;
+
+            if (value <= 0)
             {
-                return 0;
-            } else if(this.x % 2 == 0){
-                return this.x / 2;
+                return 0000;
             }
             else
             {
-                return 0;
+                string restos = "";
+                while (value > 0) 
+                {
+                    restos += value % 2;
+                    value = value / 2; //condição de parada
+                }
+                string resultadoBinario = "";
+                for (int i = restos.Length-1; i >= 0 ; i--)
+                {
+                    resultadoBinario += restos[i];
+                }
+                return int.Parse(resultadoBinario);
             }
+
+
         }
 
+        public double xRaisedByPowerOfY()
+        {
+            int count = 0;
+            double result = this.x;
+
+            while (count < (this.y - 1))
+            {
+                result *= this.x;
+                count++;
+            }
+
+            return result;
+        }
     }
 }

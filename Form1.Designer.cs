@@ -86,7 +86,6 @@
             labelOutput.Text = "...";
             labelOutput.TextAlign = ContentAlignment.TopRight;
             labelOutput.Visible = false;
-            labelOutput.Click += labelOutput_Click;
             // 
             // btnSoma
             // 
@@ -260,6 +259,7 @@
             button6.TabIndex = 14;
             button6.Text = "X^y";
             button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
             // 
             // button7
             // 
@@ -279,6 +279,7 @@
             button7.TabIndex = 13;
             button7.Text = "01010";
             button7.UseVisualStyleBackColor = false;
+            button7.Click += button7_Click;
             // 
             // btnPorcent
             // 
