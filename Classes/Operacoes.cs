@@ -9,7 +9,8 @@ namespace Exemplo.Classes
     internal class Operacoes
     {
         double x, y;
-        public Operacoes() {
+        public Operacoes()
+        {
             x = 0; y = 0;
         }
 
@@ -35,7 +36,7 @@ namespace Exemplo.Classes
             return this.y;
         }
 
-        // Operações
+        //Operações
 
         public double sum()
         {
@@ -71,27 +72,53 @@ namespace Exemplo.Classes
 
         public double squareRootOfX()
         {
-            if (this.x < 0)
+            return Math.Round(Math.Sqrt(this.x), 5);
+        }
+
+        public double percentageOfXintoY()
+        {
+            return Math.Round(((this.x / 100) * this.y), 5);
+        }
+
+        public int toBinarie()
+        {
+            long value = (long)this.x;
+
+            if (value <= 0)
             {
-                return 0;
+                return 0000;
             }
-            return Math.Sqrt(this.x);
+            else
+            {
+                string restos = "";
+                while (value > 0)
+                {
+                    restos += value % 2;
+                    value = value / 2; //condição de parada
+                }
+                string resultadoBinario = "";
+                for (int i = restos.Length - 1; i >= 0; i--)
+                {
+                    resultadoBinario += restos[i];
+                }
+                return int.Parse(resultadoBinario);
+            }
+
+
         }
 
-        public double percentageXofY()
+        public double xRaisedByPowerOfY()
         {
-            return (this.x / 100) * this.y;
-        }
+            int count = 0;
+            double result = this.x;
 
-        public string toBinaryString()
-        {
-            return Convert.ToString((long)this.x, 2);
-        }
+            while (count < (this.y - 1))
+            {
+                result *= this.x;
+                count++;
+            }
 
-        public double xRaisedToThePowerOfY()
-        {
-            return Math.Pow(this.x, this.y);
+            return result;
         }
-
     }
 }
