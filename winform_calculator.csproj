@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
-    <ApplicationIcon>_assets\icone.ico</ApplicationIcon>
+    <ApplicationIcon>assets\icone.ico</ApplicationIcon>
     <Title>Winform Calculator</Title>
     <Company>VLS Studio</Company>
     <Authors>Victor L Silva</Authors>
@@ -17,18 +17,24 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="_assets\icone.ico" />
+    <Compile Remove="_assets\**" />
+    <EmbeddedResource Remove="_assets\**" />
+    <None Remove="_assets\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="_assets\icone.jpg">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
+    <Content Include="assets\icone.ico" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="release\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="assets\icone.jpg">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
