@@ -1,17 +1,24 @@
-namespace Exemplo
+using System;
+using System.Windows.Forms;
+using winform_calculator.Models;
+using winform_calculator.Presenters;
+using winform_calculator.Views;
+using static System.Windows.Forms.DataFormats;
+
+namespace winform_calculator
 {
     internal static class Program
     {
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+
+            ICalculatorModel model = new CalculatorModel();
+            MainScreen view = new MainScreen();
+            CalculatorPresenter presenter = new CalculatorPresenter(model, view);
+
+            Application.Run(view);
         }
     }
 }
