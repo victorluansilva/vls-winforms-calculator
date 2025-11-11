@@ -16,4 +16,4 @@ Este é um simples projeto, feito em `Windows Forms` com `C#`, de uma calculador
 
 ![alt text](image-2.png)
 
-Baixe a versão do programa [#](https://github.com/victorluansilva/vls-winforms-calculator/releases/tag/v1.0)
+Baixe a versão do programa [aqui](https://github.com/victorluansilva/vls-winforms-calculator/releases/tag/v1.0)
